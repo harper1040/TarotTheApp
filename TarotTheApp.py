@@ -44,6 +44,7 @@ screen = True
 texts = Shuffle - 1
 Reg = []
 
+#Clears text boxes and image labels.
 def Clear():
     text0.config(state="normal")
     text0.delete(1.0, "end")
@@ -74,6 +75,8 @@ def Shuffled():
 
     return Random
 
+#There are 4 draw functions one draws 3 cards at one time calling the three single draw, and image functions. The other three draw one card to
+#their respective image label positions, using the specific draw and image function.
 def DrawCards():
     Draw1()
     FirstFlip(Reg)
@@ -94,6 +97,7 @@ def DrawThree():
     Draw3()
     ThirdFlip(Reg)
 
+#The next 3 functions are the flip check functions. They check to see if the app displays a regular or flipped image in each spot.
 def FirstFlip(Reg):
     if Reg[0] == 78:
         pic = ImageTk.PhotoImage(Image.open(os.path.join(Path2, FTarot[Shuffle[0]])))
@@ -124,6 +128,7 @@ def ThirdFlip(Reg):
         label3.configure(image=pic)
         label3.image = pic
 
+#These three are the specific draw funtions for each spot.
 def Draw1():
     if Shuffle == 0:
         text0.insert('end', "Shuffle First!")
