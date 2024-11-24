@@ -5,8 +5,8 @@ import os
 import time
 
 #Paths to the regular tarot card images and a flipped image of the same cards.
-Path = 'C:/Users/Jack/PycharmProjects/untitled/Tarot/'
-Path2 = "C:/Users/Jack/PycharmProjects/untitled/FlipTarot/"
+Path = '/untitled/Tarot/'
+Path2 = "/untitled/FlipTarot/"
 
 
 
